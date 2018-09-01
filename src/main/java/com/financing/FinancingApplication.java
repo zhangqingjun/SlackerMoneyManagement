@@ -1,12 +1,13 @@
-package com.Automatic.Operator.SlackerMoneyManagement;
+
+package com.financing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SlackerMoneyManagementApplication {
+public class FinancingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SlackerMoneyManagementApplication.class, args);
+		SpringApplication.run(FinancingApplication.class, args);
 	}
 }
