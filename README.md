@@ -1,2 +1,2 @@
-# SlackerMoneyManagement
-个人每天理财
+# financing 
+理财管理
