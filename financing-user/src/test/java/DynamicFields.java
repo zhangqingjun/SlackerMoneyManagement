@@ -1,3 +1,8 @@
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.Optional;
+
 public class DynamicFields {
     private Object[][] fields;
     public DynamicFields(int inittialSize){
@@ -51,11 +56,20 @@ public class DynamicFields {
         return result;
     }
 
+    static class testInvocation implements InvocationHandler{
+
+        @Override
+        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            return Optional.ofNullable(1).orElse(2);
+        }
+    }
+
     public static void main(String[] args){
         DynamicFields df = new DynamicFields(3);
         System.out.println(df);
         df.setFields("d","A value for d");
         System.out.println(df);
+        System.out.println(Proxy.isProxyClass( DynamicFields.class ));
 
     }
 }
