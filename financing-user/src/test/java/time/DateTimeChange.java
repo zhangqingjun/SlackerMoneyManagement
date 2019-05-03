@@ -9,5 +9,6 @@ public class DateTimeChange {
         LocalDateTime localDateTime = LocalDateTime.now();
         String nowTime = localDateTime.format(dateTimeFormatter);
         System.out.println(nowTime);
+        System.out.println(System.currentTimeMillis());
     }
 }
